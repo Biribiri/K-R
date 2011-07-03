@@ -1,0 +1,17 @@
+%6d	print decimal int, min 6 char wide
+%f	print floating point
+%6f	print floating point, min 6 char wide
+%.2f	print floating point, 2 char after dec
+%6.2f	print as floating point, min 6 char wide and 2 after dec
+
+%d	int
+%f	float
+%c	char
+%s	char string
+%o	octal
+%x	hexadec
+%l	long
+%u	unsigned
+%%	%
+
+#define FOO value
