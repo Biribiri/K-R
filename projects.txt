@@ -1,1 +1,1 @@
-morse code to english
+morse code to latin char
