@@ -17,6 +17,7 @@ int main(void){
 		if( ((int)c >= 97 && (int)c <= 123) && ++letters[c - 'a'] > max)
 				max = letters[c - 'a'];
 	}
+	putchar('\n');
 	//print vertical histogram
 	while(max > 0){
 		for(int n = 0; n < 26; ++n){
