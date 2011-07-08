@@ -6,7 +6,7 @@ void copy(char to[], char from[]);
 void reverse(char rev[], char norm[], int len);
 
 int main(void){
-	int len, max, c;
+	int len, max;
 	char line[MAXLINE], longest[MAXLINE], rev[MAXLINE];
 	
 	max = 0;
@@ -20,7 +20,7 @@ int main(void){
 	}
 	if(max > 0)
 		printf("%s", longest);
-
+	
 	return 0;
 }
 
@@ -30,8 +30,7 @@ int getlin(char line[], int max){
 	for(i = 0; i < max-1 && (c = getchar()) != EOF && c != '\n'; ++i)
 		line[i] = c;
 	if(c == '\n'){
-		line[i] = c;
-		++i;
+		line[i++] = c;
 	}
 	line[i] = '\0';
 	

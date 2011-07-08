@@ -14,7 +14,7 @@ int main(void){
 	//gets input and stores it in letters according to letter
 	while( (c = getchar()) != EOF){
 		c = tolower(c);
-		if( ((int)c >= 97 && (int)c <= 123) && ++letters[c - 'a'] > max)
+		if( (c >= 'a' && c <= 'z') && ++letters[c - 'a'] > max)
 				max = letters[c - 'a'];
 	}
 	putchar('\n');

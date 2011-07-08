@@ -8,21 +8,24 @@ int main(void){
 	int c;
 
 	while((c = getchar()) != EOF){
-		if(c == '\t')
+		if(c == '\n'){
+			putchar(c);
+			tabspace = 0;
+		}
+		else if(c == '\t'){
 			detab();
+		}
 		else{
-			printf("%c", c);
+			putchar(c);
 			++tabspace;
 		}
-		tabspace = 0;
 	}
 
 	return 0;
 }
 
 void detab(void){
-	if(tabspace++ == 0)
-		printf(" ");
-	while((tabspace % 8) != 0)
-		printf(" ");
+	do{
+		putchar(' ');
+	}while(++tabspace % 8);
 }

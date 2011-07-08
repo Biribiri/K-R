@@ -9,7 +9,6 @@ int main(void){
 	
 	while((len = getlin(line)) > 0){
 		if(len >= MINPRINT){
-			printf("test1\n");
 			printf("%s", line);
 			while((c = getchar()) != '\n'){
 				printf("%c", c);
@@ -23,7 +22,7 @@ int main(void){
 }
 
 int getlin(char line[]){
-	int i,c;
+	int i, c;
 
 	for(i = 0; i < MINPRINT && (c = getchar()) != '\n' && c != EOF; ++i)
 		line[i] = c;
