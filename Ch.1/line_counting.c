@@ -1,3 +1,6 @@
+//counts the number of spaces, tabs, newlines; echos input but removes extra spaces
+//replaces tabs with \t and backslashes(?) with \b
+
 #include <stdio.h>
 
 int main(void)

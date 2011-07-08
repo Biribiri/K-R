@@ -1,3 +1,5 @@
+//Counts numbers, spaces, and other char.
+
 #include <stdio.h>
 
 int main(void)

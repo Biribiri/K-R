@@ -1,3 +1,5 @@
+//replaces tabs with correct ammount of spaces
+
 #include <stdio.h>
 
 int tabspace = 0;
@@ -25,6 +27,7 @@ int main(void){
 }
 
 void detab(void){
+	//do-while fixes the problem if tab is first input
 	do{
 		putchar(' ');
 	}while(++tabspace % 8);

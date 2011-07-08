@@ -1,3 +1,5 @@
+//counts input including newlines
+
 #include <stdio.h>
 
 int main()

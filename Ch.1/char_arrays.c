@@ -1,3 +1,5 @@
+//Gets a line(length MAXLINE), reverses it and prints, and prints the longest line
+
 #include <stdio.h>
 #define MAXLINE 10
 

@@ -1,3 +1,5 @@
+/*not sure if this is what the book wanted but this is what i did. deal with it*/
+
 #include <stdio.h>
 
 int main(void){

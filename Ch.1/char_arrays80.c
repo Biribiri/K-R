@@ -1,7 +1,9 @@
-#include <stdio.h>
-#define MINPRINT 5
+//prints all input longer than MINPRINT
 
-int getlin(char line[]);
+#include <stdio.h>
+#define MINPRINT 80
+
+int getlin(char line[]);	//gets a line with max lengthe of MINPRINT
 
 int main(void){
 	int len, c;
@@ -11,7 +13,7 @@ int main(void){
 		if(len >= MINPRINT){
 			printf("%s", line);
 			while((c = getchar()) != '\n'){
-				printf("%c", c);
+				putchar(c);
 				++len;
 			}
 			printf(" - %d\n", len);

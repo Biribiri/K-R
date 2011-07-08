@@ -1,3 +1,5 @@
+//folds input at FOLD length
+
 #include <stdio.h>
 
 //where to fold the text

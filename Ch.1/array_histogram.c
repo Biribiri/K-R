@@ -1,7 +1,7 @@
-//
+//Prints a vertical histogram with input
 
 #include <stdio.h>
-#include <ctype.h>
+#include <ctype.h>	//for tolower()
 
 int main(void){
 	int c, max;
@@ -41,7 +41,7 @@ int main(void){
 			printf(" %d ", letters[i]);
 	}
 	putchar('\n');
-	//vertical histogram
+	//horizontal histogram
 	/*for(int i = 0; i < 26; ++i){
 		printf("%c[%d]: ", 'a' + i, letters[i]);
 		while(letters[i] >= 0){
