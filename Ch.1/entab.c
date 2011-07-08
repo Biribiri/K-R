@@ -1,3 +1,5 @@
+//replaces spaces with appropiate amount of tabs
+
 #include <stdio.h>
 
 int tabspace = 0;
@@ -9,7 +11,7 @@ int main(void){
 
 	while((c = getchar()) != EOF){
 		if(c != ' '){
-			printf("%c", c);
+			putchar(c);
 			tabspace++;
 		}
 		else
@@ -19,23 +21,19 @@ int main(void){
 }
 
 int entab(){
-	int c, spacecount, index;
-	char spaces[10];
+	int c, spacecount = 0;
 
-	++tabspace;
-	index = spacecount = 0;
-	spaces[index++] = ' ';
-	while((tabspace % 8) != 0){
-		if((c = getchar()) == ' '){
+	while(tabspace % 8){
+		if((c = getchar()) == ' ')
 			spacecount++;
-			spaces[index++] = ' ';
-		}
 		else{
-			spaces[index] = '\0';
-			printf("%s%c", spaces, c);
+			while(spacecount-- >= 0)
+				putchar(' ');
+			putchar(c);
 			return 0;
 		}
 	}
-	printf("\t");
+	putchar('\t');
+
 	return 0;
 }
