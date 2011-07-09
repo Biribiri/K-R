@@ -30,7 +30,7 @@ int entab(){
 			spacecount++;
 		else{
 			while(spacecount-- >= 0)
-				putchar('*');
+				putchar(' ');
 			putchar(c);
 			return 0;
 		}
@@ -39,4 +39,3 @@ int entab(){
 
 	return 0;
 }
-//this                  is a test
