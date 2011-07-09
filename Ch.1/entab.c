@@ -10,12 +10,14 @@ int main(void){
 	int c;
 
 	while((c = getchar()) != EOF){
-		if(c != ' '){
+		if(c == ' ')
+			entab();
+		else{
 			putchar(c);
 			tabspace++;
+			if(c == '\n')
+				tabspace = 0;
 		}
-		else
-			entab();
 	}
 	return 0;
 }
@@ -23,12 +25,12 @@ int main(void){
 int entab(){
 	int c, spacecount = 0;
 
-	while(tabspace % 8){
+	while(++tabspace % 8){
 		if((c = getchar()) == ' ')
 			spacecount++;
 		else{
 			while(spacecount-- >= 0)
-				putchar(' ');
+				putchar('*');
 			putchar(c);
 			return 0;
 		}
@@ -37,3 +39,4 @@ int entab(){
 
 	return 0;
 }
+//this                  is a test
