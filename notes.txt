@@ -8,10 +8,26 @@
 %f	float
 %c	char
 %s	char string
-%o	octal
-%x	hexadec
+%o	octal	leading 0
+%x	hexadec	leading 0x
 %l	long
 %u	unsigned
 %%	%
 
 #define FOO value
+
+
+--Escape Sequences--
+\a	alert
+\b	backspace
+\f	formfeed
+\n	newline
+\r	carriage return
+\t	horizontal tab
+\v	vertical tab
+\\	backslash
+\?	question mark
+\'	single quote
+\"	double quote
+\ooo octal
+\xhh hexa
