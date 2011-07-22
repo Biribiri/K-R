@@ -4,42 +4,33 @@ and by direct computation. Harder if you compute them: determine the ranges of t
 floating-point types.  */
 
 #include <stdio.h>
-#include <limits.h>
-
-int powt(int n);
 
 int main(void){
-	//using variables so program doesn't have to redo the same thing 
-	unsigned char c;
-	unsigned int i;
-	unsigned long l;
-	unsigned short s;
+	unsigned char uc = -1;
+	unsigned int ui = -1;
+	unsigned long ul = -1;
+	unsigned short us = -1;
+	signed char sc = uc / 2;
+	signed int si = ui / 2;
+	signed long sl = ul / 2;
+	signed short ss = us / 2;
+
 
 	//size of signed and unsigned should be the same since signed just uses one bit as -/+
-	printf("Size of char:\t%u bytes\n", c = sizeof(char));
-	printf("Size of int:\t%u bytes\n", i = sizeof(int));
-	printf("Size of long:\t%lu bytes\n", l = sizeof(long));
-	printf("Size of short:\t%u bytes\n", s = sizeof(short));
+	printf("Size of char:\t%d bytes\n", sizeof(char));
+	printf("Size of int:\t%d bytes\n", sizeof(int));
+	printf("Size of long:\t%d bytes\n", sizeof(long));
+	printf("Size of short:\t%d bytes\n", sizeof(short));
 	putchar('\n');
-	printf("Max value of unsinged char:\t%u \n", c = powt(c));
-	printf("Max value of unsinged int:\t%u \n", i = powt(i));
-	printf("Max value of unsinged long:\t%lu \n", l = powt(l));
-	printf("Max value of unsinged short:\t%u \n", s = powt(s));
+	printf("Max value of unsinged char:\t%u \n", uc);
+	printf("Max value of unsinged int:\t%u \n", ui);
+	printf("Max value of unsinged long:\t%lu \n", ul);
+	printf("Max value of unsinged short:\t%hu \n", us);
 	putchar('\n');
-	printf("Range of singed char:\t%u \n", c / 2);
-	printf("Range of singed int:\t%u \n", i / 2);
-	printf("Range of singed long:\t%lu \n", l / 2);
-	printf("Range of singed short:\t%u \n", s / 2);
+	printf("Range of singed char:\t%d to %d\n", sc+1, sc);
+	printf("Range of singed int:\t%d to %d\n", si+1, si);
+	printf("Range of singed long:\t%ld to %ld\n", sl+1, sl);
+	printf("Range of singed short:\t%hd to %hd\n", ss+1, ss);
 
 	return 0;
-}
-
-int powt(int n){
-	unsigned long i = 1;
-
-	n *= 8;
-	while(n-- > 0)
-		i *= 2;
-
-	return i-1;
 }
