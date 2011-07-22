@@ -6,25 +6,30 @@ floating-point types.  */
 #include <stdio.h>
 #include <limits.h>
 
-int powt(int x);
+int powt(int n);
 
 int main(void){
-	
-	//size of signed and unsigned should be the same
-	printf("Size of char:\t%d bytes\n", sizeof(unsigned char));
-	printf("Size of int:\t%d bytes\n", sizeof(unsigned int));
-	printf("Size of long:\t%d bytes\n", sizeof(unsigned long));
-	printf("Size of short:\t%d bytes\n", sizeof(unsigned short));
+	//using variables so program doesn't have to redo the same thing 
+	unsigned char c;
+	unsigned int i;
+	unsigned long l;
+	unsigned short s;
+
+	//size of signed and unsigned should be the same since signed just uses one bit as -/+
+	printf("Size of char:\t%u bytes\n", c = sizeof(char));
+	printf("Size of int:\t%u bytes\n", i = sizeof(int));
+	printf("Size of long:\t%lu bytes\n", l = sizeof(long));
+	printf("Size of short:\t%u bytes\n", s = sizeof(short));
 	putchar('\n');
-	printf("Max value of unsinged char:\t%d \n", powt(sizeof(unsigned char)));
-	printf("Max value of unsinged int:\t%d \n", powt(sizeof(unsigned int)));
-	printf("Max value of unsinged long:\t%d \n", powt(sizeof(unsigned long)));
-	printf("Max value of unsinged short:\t%d \n", powt(sizeof(unsigned short)));
+	printf("Max value of unsinged char:\t%u \n", c = powt(c));
+	printf("Max value of unsinged int:\t%u \n", i = powt(i));
+	printf("Max value of unsinged long:\t%lu \n", l = powt(l));
+	printf("Max value of unsinged short:\t%u \n", s = powt(s));
 	putchar('\n');
-	printf("Range of singed char:\t%d \n", powt(sizeof(signed char))/2);
-	printf("Range of singed int:\t%d \n", powt(sizeof(signed int))/2);
-	printf("Range of singed long:\t%d \n", powt(sizeof(signed long))/2);
-	printf("Range of singed short:\t%d \n", powt(sizeof(signed short))/2);
+	printf("Range of singed char:\t%u \n", c / 2);
+	printf("Range of singed int:\t%u \n", i / 2);
+	printf("Range of singed long:\t%lu \n", l / 2);
+	printf("Range of singed short:\t%u \n", s / 2);
 
 	return 0;
 }
