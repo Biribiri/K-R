@@ -9,19 +9,14 @@ int main(void){
 
 	i = 0;
 	/*for(i = 0; i < LIM-1 && (c = getchar()) != '\n' && c != EOF; i++)
-		;*/
-	do{
-		c = getchar();
-		if(i < LIM-1){
-			if(c != '\n')
+		s[i] = c;*/
+	while((c=getchar()) != '\n'){
+		if(i < LIM-1)
 				string[i++] = c;
-			else{
-				string[i] = '\0';
-				break;
-			}
-		}
-	}while(c != EOF);
-
+		else
+			break;
+	}
+	string[i] = '\0';
 	printf("%s\n", string);
 
 	return 0;
